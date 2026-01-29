@@ -1,65 +1,118 @@
 import Image from "next/image";
+import { Inter } from "next/font/google";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { BadgeInfo, BookMarked, Mail } from "lucide-react";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <div className="">
+        <div className="relative w-full h-160 text-white rounded-xl">
+          <Image
+            src="/photos/competitions/1.png"
+            alt="Inglemoor High School Robotics"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="flex-1" />
+            <div className="flex-1 flex flex-col pl-[6rem]">
+              <Image
+                src="/brand/logowhite.png"
+                alt="Valhallabots Logo"
+                width={389}
+                height={120}
+              />
+              <p
+                // this mess under here is a text shadow. it looks pretty good dont judge
+                className={`${inter.className} pt-1 text-5xl font-medium [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]`}
+              >
+                Inglemoor High
+                <br />
+                School Robotics
+              </p>
+              <p
+                className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-2xl mt-1 font-medium`}
+              >
+                FRC Team #3268 AKA “Valhalla Bots”
+              </p>
+              <div className="pt-5 space-x-4">
+                {/* buttons */}
+                <Link href="mailto:inglemoor.robotics@gmail.com">
+                  <Button
+                    size="lg"
+                    className="bg-yellow-500 hover:bg-yellow-600 text-black hover:cursor-pointer"
+                  >
+                    <Mail className="mr-1" />
+                    Email Us
+                  </Button>
+                </Link>
+                <Link href="/donate">
+                  <Button
+                    size="lg"
+                    className="bg-yellow-500 hover:bg-yellow-600 text-black hover:cursor-pointer"
+                  >
+                    <BadgeInfo className="mr-1" />
+                    Sponsor Info
+                  </Button>
+                </Link>
+                <Link href="/resources">
+                  <Button
+                    size="lg"
+                    className="text-black hover:cursor-pointer"
+                    variant="outline"
+                  >
+                    <BookMarked className="mr-1" />
+                    Resources
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* under header */}
+        <div className="text-4xl p-20">
+          <p>
+            <span className="font-semibold">Hey there!</span>
+            <br /> We{"'"}re the Inglemoor High School Robotics Team. Our goal
+            is simple, to have fun building robots. We{"'"}re based in Kenmore,
+            Washington (east of Seattle!).
           </p>
+          <p className="mt-9 mb-[4rem]">
+            We compete in FRC, the FIRST Robotics Competition. Which entails
+            building a robot to complete a set challenge in only 6 weeks!
+          </p>
+
+          <div className="flex w-full">
+            <p className="w-4/8">
+              Blink and you might miss it! We participate in two yearly competitions, which we attend on March 13th and 20th, where we showcase our robot, field it with and against teams across the PNW!
+            </p>
+            <div className="w-4/8 relative h-80">
+              <img
+                src="/photos/frame1.png"
+                alt="Team photo 1"
+                width={320}
+                height={360}
+                className="absolute -rotate-6 left-0 top-0 drop-shadow-lg"
+              />
+              <img
+                src="/photos/frame2.png"
+                alt="Team photo 2"
+                width={320}
+                height={360}
+                className="absolute rotate-6 left-56 top-8 drop-shadow-lg"
+              />
+            </div>
+          </div>
+          <div>
+            <p className="font-bold">NSD Student looking to join?</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
