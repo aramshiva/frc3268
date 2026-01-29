@@ -89,9 +89,12 @@ export default function Home() {
 
           <div className="flex w-full">
             <p className="w-4/8">
-              Blink and you might miss it! We participate in two yearly competitions, which we attend on March 13th and 20th, where we showcase our robot, field it with and against teams across the PNW!
+              Blink and you might miss it! We participate in two yearly
+              competitions, which we attend on March 13th and 20th, where we
+              showcase our robot, field it with and against teams across the
+              PNW!
             </p>
-            <div className="w-4/8 relative h-80">
+            <div className="w-4/8 relative h-80 mb-20">
               <img
                 src="/photos/frame1.png"
                 alt="Team photo 1"
@@ -109,7 +112,16 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <p className="font-bold">NSD Student looking to join?</p>
+            <p className="font-semibold">NSD Student looking to join?</p>
+            <p>
+              We gladly accept new member who attend the Northshore School
+              District (per school policy) to our team. We meet on Mondays,
+              Wednesdays and Thursdays, after school, both during and outside
+              the 6-week “build season” in room 301 (near the gym and art
+              buildings)! We strongly recommend attending all meetings, as they
+              help skill building and demonstrate commitment (something we value
+              a lot!
+            </p>
           </div>
         </div>
       </div>
