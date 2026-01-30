@@ -24,7 +24,7 @@ export default function Home() {
               <Image
                 src="/brand/logowhite.png"
                 alt="Valhallabots Logo"
-                width={389}
+                width={300}
                 height={120}
               />
               <p
@@ -94,7 +94,7 @@ export default function Home() {
               showcase our robot, field it with and against teams across the
               PNW!
             </p>
-            <div className="w-4/8 relative h-80 mb-20">
+            <div className="w-4/8 relative h-80 mb-16">
               <img
                 src="/photos/frame1.png"
                 alt="Team photo 1"
@@ -107,7 +107,7 @@ export default function Home() {
                 alt="Team photo 2"
                 width={320}
                 height={360}
-                className="absolute rotate-6 left-56 top-8 drop-shadow-lg"
+                className="absolute rotate-6 left-56 top-8 drop-shadow-lg transition-all"
               />
             </div>
           </div>
@@ -120,8 +120,25 @@ export default function Home() {
               the 6-week “build season” in room 301 (near the gym and art
               buildings)! We strongly recommend attending all meetings, as they
               help skill building and demonstrate commitment (something we value
-              a lot!
+              a lot)!
             </p>
+            <div className="mt-5">
+              <div className="flex items-center gap-5">
+                <span>The 2026 FRC season theme is</span>
+                <Link href="https://www.firstinspires.org/programs/frc/game-and-season">
+                  <Image
+                      className="inline-block"
+                      src="/logos/rebuilt.png"
+                      alt="rebuilt logo"
+                      width={100}
+                      height={100}
+                  />
+                </Link>
+                </div>
+              Generally, we meet 4-5 days a week during the season,
+              due to the increased workload that the build season brings.
+              You can learn more about this year’s theme on the Resources page.
+            </div>
           </div>
         </div>
       </div>
