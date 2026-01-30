@@ -82,13 +82,13 @@ export default function Home() {
             is simple, to have fun building robots. We{"'"}re based in Kenmore,
             Washington (east of Seattle!).
           </p>
-          <p className="mt-9 mb-[4rem]">
+          <p className="mt-9">
             We compete in FRC, the FIRST Robotics Competition. Which entails
             building a robot to complete a set challenge in only 6 weeks!
           </p>
 
           <div className="flex w-full">
-            <p className="w-4/8">
+            <p className="w-4/8 pt-9">
               Blink and you might miss it! We participate in two yearly
               competitions, which we attend on March 13th and 20th, where we
               showcase our robot, field it with and against teams across the

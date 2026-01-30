@@ -39,7 +39,7 @@ export function Resources({ sections = [] }: ResourcesProps) {
               />
             )}
             <div>
-              <p className="font-bold text-3xl">{section.title}</p>
+              <p className="font-semibold text-3xl">{section.title}</p>
               {section.subtitle && <p>{section.subtitle}</p>}
             </div>
           </div>
@@ -89,10 +89,10 @@ export default function Resource() {
       id: 3,
       title: "Team Resources",
       subtitle: "Resources made by us! ",
-      imageSrc: "/logos/3268.png",
+      imageSrc: "/logos/logosquare.png",
       imageAlt: "Valhallabots Logo",
-      imageWidth: 120,
-      imageHeight: 120,
+      imageWidth: 60,
+      imageHeight: 60,
       links: [
         { label: "Links Slideshow", href: "https://docs.google.com/presentation/d/1uBUXaU0klhqrKfSVgvOhWwHHzq5rqm7AjAje5k9i2Tc/edit?usp=sharing" },
         { label: "ValhallaLib Repository", href: "https://github.com/frc3268/ValhallaLib"},
@@ -126,6 +126,13 @@ export default function Resource() {
               >
                 Resources
               </p>
+              <Link href="/" className="mt-2">
+                <p
+                  className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-lg font-medium underline`}
+                >
+                  ← Back to Home
+                </p>
+              </Link>
             </div>
             <div className="flex-1" />
           </div>
