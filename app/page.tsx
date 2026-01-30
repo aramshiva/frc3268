@@ -12,7 +12,7 @@ export default function Home() {
       <div className="">
         <div className="relative w-full h-160 text-white rounded-xl">
           <Image
-            src="/photos/competitions/1.png"
+            src="/photos/competitions/1.webp"
             alt="Inglemoor High School Robotics"
             fill
             priority
@@ -96,14 +96,14 @@ export default function Home() {
             </p>
             <div className="w-4/8 relative h-80 mb-16">
               <img
-                src="/photos/frame1.png"
+                src="/photos/frame1.webp"
                 alt="Team photo 1"
                 width={320}
                 height={360}
                 className="absolute -rotate-6 left-0 top-0 drop-shadow-lg hover:scale-102 transition-all"
               />
               <img
-                src="/photos/frame2.png"
+                src="/photos/frame2.webp"
                 alt="Team photo 2"
                 width={320}
                 height={360}

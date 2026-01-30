@@ -106,7 +106,7 @@ export default function Resource() {
       <div className="">
         <div className="relative w-full h-100 text-white rounded-xl">
           <Image
-            src="/photos/competitions/2.png"
+            src="/photos/competitions/2.webp"
             alt="Inglemoor High School Robotics"
             fill
             priority
