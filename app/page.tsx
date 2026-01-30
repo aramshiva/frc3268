@@ -22,7 +22,7 @@ export default function Home() {
             <div className="flex-1" />
             <div className="flex-1 flex flex-col pl-[6rem]">
               <Image
-                src="/brand/logowhite.png"
+                src="/logos/3268.png"
                 alt="Valhallabots Logo"
                 width={300}
                 height={120}
@@ -100,14 +100,14 @@ export default function Home() {
                 alt="Team photo 1"
                 width={320}
                 height={360}
-                className="absolute -rotate-6 left-0 top-0 drop-shadow-lg"
+                className="absolute -rotate-6 left-0 top-0 drop-shadow-lg hover:scale-102 transition-all"
               />
               <img
                 src="/photos/frame2.png"
                 alt="Team photo 2"
                 width={320}
                 height={360}
-                className="absolute rotate-6 left-56 top-8 drop-shadow-lg transition-all"
+                className="absolute rotate-6 left-54 top-8 drop-shadow-lg hover:scale-102 transition-all"
               />
             </div>
           </div>
