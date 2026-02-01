@@ -111,12 +111,6 @@ export default function Resource() {
           alt="Inglemoor High School Robotics"
           fill
           priority
-          unoptimized
-          sizes="100vw"
-          quality={85}
-          placeholder="blur"
-          blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3C/svg%3E"
-          className="object-cover"
         />
           <div className="absolute inset-0 flex items-end mb-4 sm:mb-10">
             <div className="flex-1 flex flex-col px-6 sm:pl-16">
