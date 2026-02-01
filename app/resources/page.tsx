@@ -29,18 +29,19 @@ export function Resources({ sections = [] }: ResourcesProps) {
     <div className="flex flex-col space-y-8">
       {sections.map((section) => (
         <div key={section.id}>
-          <div className="flex items-start gap-5">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-5">
             {section.imageSrc && (
               <Image
                 src={section.imageSrc}
                 alt={section.imageAlt ?? ""}
                 width={section.imageWidth ?? 120}
                 height={section.imageHeight ?? 120}
+                className="flex-shrink-0 object-contain"
               />
             )}
-            <div>
-              <p className="font-semibold text-3xl">{section.title}</p>
-              {section.subtitle && <p>{section.subtitle}</p>}
+            <div className="text-center sm:text-left">
+              <p className="font-semibold text-xl sm:text-3xl">{section.title}</p>
+              {section.subtitle && <p className="text-sm sm:text-base">{section.subtitle}</p>}
             </div>
           </div>
           <ul className="mt-4 list-disc underline">
@@ -104,7 +105,7 @@ export default function Resource() {
   return (
     <>
       <div className="">
-        <div className="relative w-full h-100 text-white rounded-xl">
+        <div className="relative w-full h-64 sm:h-100 text-white rounded-xl">
         <Image
           src="/photos/competitions/2.webp"
           alt="Inglemoor High School Robotics"
@@ -115,34 +116,35 @@ export default function Resource() {
           quality={85}
           placeholder="blur"
           blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3C/svg%3E"
+          className="object-cover"
         />
-          <div className="absolute inset-0 flex items-end mb-10">
-            <div className="flex-1 flex flex-col pl-16">
+          <div className="absolute inset-0 flex items-end mb-4 sm:mb-10">
+            <div className="flex-1 flex flex-col px-6 sm:pl-16">
               <Image
-                  src="/logos/3268.svg"
+                src="/logos/3268.svg"
                 alt="Valhallabots Logo"
                 width={300}
                 height={120}
+                className="w-48 sm:w-[300px] h-auto"
               />
               <p
-                // this mess under here is a text shadow. it looks pretty good dont judge
-                className={`${inter.className} pt-1 text-4xl font-medium [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]`}
+                className={`${inter.className} pt-1 text-2xl sm:text-4xl font-medium [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]`}
               >
                 Resources
               </p>
               <Link href="/" className="mt-2">
                 <p
-                  className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-lg font-medium underline`}
+                  className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-sm sm:text-lg font-medium underline`}
                 >
                   ← Back to Home
                 </p>
               </Link>
             </div>
-            <div className="flex-1" />
+            <div className="hidden sm:block sm:flex-1" />
           </div>
         </div>
-        <div className="p-16 text-2xl">
-          <p className="pb-9">Here’s a (non-exclusive) list of resources we’ve made over the years:</p>
+        <div className="p-6 sm:p-16 text-lg sm:text-2xl">
+          <p className="pb-6 sm:pb-9">Here’s a (non-exclusive) list of resources we’ve made over the years:</p>
           <Resources sections={sections} />
         </div>
       </div>
