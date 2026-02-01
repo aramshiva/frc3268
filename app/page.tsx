@@ -11,20 +11,23 @@ export default function Home() {
     <>
       <div className="">
         <div className="relative w-full h-160 text-white rounded-xl">
-          <Image
-            src="/photos/competitions/1.webp"
-            alt="Inglemoor High School Robotics"
-            fill
-            priority
-            className="object-cover"
-          />
+        <Image
+          src="/photos/competitions/1.webp"
+          alt="Inglemoor High School Robotics"
+          fill
+          priority
+          sizes="100vw"
+          quality={85}
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3C/svg%3E"
+        />
           <div className="absolute inset-0 flex items-center">
             <div className="flex-1" />
             <div className="flex-1 flex flex-col pl-[6rem]">
               <Image
                 src="/logos/3268.png"
                 alt="Valhallabots Logo"
-                width={300}
+                width={250}
                 height={120}
               />
               <p
