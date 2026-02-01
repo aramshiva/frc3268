@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div className="">
-        <div className="relative w-full h-160 text-white rounded-xl">
+        <div className="relative w-full h-[28rem] md:h-160 text-white rounded-xl">
         <Image
           src="/photos/competitions/1.webp"
           alt="Inglemoor High School Robotics"
@@ -22,9 +22,9 @@ export default function Home() {
           placeholder="blur"
           blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3C/svg%3E"
         />
-          <div className="absolute inset-0 flex items-center">
-            <div className="flex-1" />
-            <div className="flex-1 flex flex-col pl-[6rem]">
+          <div className="absolute inset-0 flex items-center justify-center md:justify-start">
+            <div className="hidden md:block md:flex-1" />
+            <div className="flex-1 flex flex-col items-center md:items-start px-6 md:pl-[6rem] md:px-0">
               <Image
                 src="/logos/3268.svg"
                 alt="Valhallabots Logo"
@@ -33,18 +33,18 @@ export default function Home() {
               />
               <p
                 // this mess under here is a text shadow. it looks pretty good dont judge
-                className={`${inter.className} pt-1 text-5xl font-medium [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]`}
+                className={`${inter.className} pt-1 text-3xl md:text-5xl font-medium [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-center md:text-left`}
               >
                 Inglemoor High
                 <br />
                 School Robotics
               </p>
               <p
-                className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-2xl mt-1 font-medium`}
+                className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-2xl mt-1 font-medium text-center md:text-left`}
               >
                 FRC Team #3268 AKA “Valhalla Bots”
               </p>
-              <div className="pt-5 space-x-4">
+              <div className="pt-5 flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
                 {/* buttons */}
                 <Link href="mailto:inglemoor.robotics@gmail.com">
                   <Button
@@ -79,39 +79,35 @@ export default function Home() {
           </div>
         </div>
         {/* under header */}
-        <div className="text-4xl p-20">
+        <div className="text-xl md:text-4xl p-6 md:p-20">
           <p>
             <span className="font-semibold">Hey there!</span>
             <br /> We{"'"}re the Inglemoor High School Robotics Team. Our goal
             is simple, to have fun building robots. We{"'"}re based in Kenmore,
             Washington (east of Seattle!).
           </p>
-          <p className="mt-9">
+          <p className="mt-6 md:mt-9">
             We compete in FRC, the FIRST Robotics Competition. Which entails
             building a robot to complete a set challenge in only 6 weeks!
           </p>
 
-          <div className="flex w-full">
-            <p className="w-4/8 pt-9">
+          <div className="flex flex-col md:flex-row w-full">
+            <p className="w-full md:w-4/8 pt-6 md:pt-9">
               Blink and you might miss it! We participate in two yearly
               competitions, which we attend on March 13th and 20th, where we
               showcase our robot, field it with and against teams across the
               PNW!
             </p>
-            <div className="w-4/8 relative h-80 mb-16">
+            <div className="w-full md:w-4/8 relative h-60 md:h-80 mb-8 md:mb-16 mt-6 md:mt-0">
               <img
                 src="/photos/frame1.webp"
                 alt="Team photo 1"
-                width={320}
-                height={360}
-                className="absolute -rotate-6 left-0 top-0 drop-shadow-lg hover:scale-102 transition-all"
+                className="absolute -rotate-6 left-0 top-0 drop-shadow-lg hover:scale-102 transition-all w-48 md:w-80"
               />
               <img
                 src="/photos/frame2.webp"
                 alt="Team photo 2"
-                width={320}
-                height={360}
-                className="absolute rotate-6 left-54 top-8 drop-shadow-lg hover:scale-102 transition-all"
+                className="absolute rotate-6 left-32 md:left-54 top-8 drop-shadow-lg hover:scale-102 transition-all w-48 md:w-80"
               />
             </div>
           </div>
@@ -127,18 +123,19 @@ export default function Home() {
               a lot)!
             </p>
             <div className="mt-5">
-              <div className="flex items-center gap-5">
-                <span>The 2026 FRC season theme is</span>
-                <Link href="https://www.firstinspires.org/programs/frc/game-and-season">
+              <span>
+                The 2026 FRC season theme is{" "}
+                <Link href="https://www.firstinspires.org/programs/frc/game-and-season" className="inline-block align-middle">
                   <Image
                       className="inline-block"
                       src="/logos/rebuilt.png"
                       alt="rebuilt logo"
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={20}
                   />
-                </Link>
-                </div>
+                </Link>.
+              </span>
+              <br/>
               Generally, we meet 4-5 days a week during the season,
               due to the increased workload that the build season brings.
               You can learn more about this year’s theme on the Resources page.
