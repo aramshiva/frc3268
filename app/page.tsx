@@ -16,6 +16,7 @@ export default function Home() {
           alt="Inglemoor High School Robotics"
           fill
           priority
+          unoptimized
           sizes="100vw"
           quality={85}
           placeholder="blur"
@@ -25,7 +26,7 @@ export default function Home() {
             <div className="flex-1" />
             <div className="flex-1 flex flex-col pl-[6rem]">
               <Image
-                src="/logos/3268.png"
+                src="/logos/3268.svg"
                 alt="Valhallabots Logo"
                 width={250}
                 height={120}
