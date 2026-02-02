@@ -16,11 +16,6 @@ export default function Home() {
           alt="Inglemoor High School Robotics"
           fill
           priority
-          unoptimized
-          sizes="100vw"
-          quality={85}
-          placeholder="blur"
-          blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400'%3E%3C/svg%3E"
         />
           <div className="absolute inset-0 flex items-center justify-center md:justify-start">
             <div className="hidden md:block md:flex-1" />
