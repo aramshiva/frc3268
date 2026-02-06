@@ -39,7 +39,7 @@ export default function Donate() {
           <p className="text-2xl mb-5">
             Support Inglemoor High School team robotics team,{' "'}Valhalla Bots
             {'"'}. Sponsoring is a great way for your company to provide support
-            for students intrested in STEM, CAD, programming, electrical, 3D
+            for students interested in STEM, CAD, programming, electrical, 3D
             design and more!
           </p>{" "}
           <Link href="mailto:inglemoor.robotics@gmail.com">

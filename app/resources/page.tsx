@@ -109,6 +109,7 @@ export default function Resource() {
         <Image
           src="/photos/competitions/2.webp"
           alt="Inglemoor High School Robotics"
+          className="object-cover"
           fill
           priority
         />
