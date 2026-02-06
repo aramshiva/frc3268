@@ -14,6 +14,7 @@ export default function Home() {
         <Image
           src="/photos/competitions/1.webp"
           alt="Inglemoor High School Robotics"
+          className="object-cover"
           fill
           priority
         />
@@ -50,7 +51,7 @@ export default function Home() {
                     Email Us
                   </Button>
                 </Link>
-                <Link href="/donate">
+                <Link href="/sponsor" target="_blank">
                   <Button
                     size="lg"
                     className="bg-yellow-500 hover:bg-yellow-600 text-black hover:cursor-pointer"
