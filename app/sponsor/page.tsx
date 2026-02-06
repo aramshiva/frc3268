@@ -26,6 +26,11 @@ const sponsors = [
     alt: "OSPI",
     href: "https://ospi.k12.wa.us",
   },
+  {
+    src: "/logos/marquee/inglemoor.png",
+    alt: "Inglemoor High School",
+    href: "https://inglemoor.nsd.org",
+  }
 ];
 
 export default function Donate() {
@@ -78,7 +83,7 @@ export default function Donate() {
           ))}
         </Marquee>
       </div> */}
-      <div className="flex flex-row justify-between p-6">
+      <div className="flex flex-row justify-between p-16">
         <Card className="w-72 bg-yellow-50">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <BadgeDollarSign />
