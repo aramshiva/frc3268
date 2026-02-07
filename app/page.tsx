@@ -36,7 +36,7 @@ export default function Home() {
                 School Robotics
               </p>
               <p
-                className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-2xl mt-1 font-medium text-center md:text-left`}
+                className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-base md:text-3xl mt-1 font-medium text-center md:text-left`}
               >
                 FRC Team #3268 AKA “Valhalla Bots”
               </p>
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </div>
         {/* under header */}
-        <div className="text-xl md:text-4xl p-6 md:p-20">
+        <div className="text-xl md:text-2xl p-6 md:p-20 w-[65%] m-auto">
           <p>
             <span className="font-semibold">Hey there!</span>
             <br /> We{"'"}re the Inglemoor High School Robotics Team. Our goal
@@ -132,8 +132,8 @@ export default function Home() {
                 </Link>.
               </span>
               <br/>
-              Generally, we meet 4-5 days a week during the season,
-              due to the increased workload that the build season brings.
+              Generally, we meet 4-5 days a week during the build season,
+              due to the increased workload that it brings.
               You can learn more about this year’s theme on the Resources page.
             </div>
           </div>

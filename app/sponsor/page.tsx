@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { BadgeDollarSign, Cpu, HeartHandshake, Mail, PiggyBank } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,6 +38,7 @@ export default function Donate() {
     <>
       <div className="flex flex-col sm:flex-row items-center gap-6 p-6 sm:p-16">
         <div className="w-full sm:w-1/2 items-center">
+        <Image src="/logos/logosquare.svg" alt="Valhallabots Logo" width={100} height={100} className="pb-1"/>
           <p className="text-5xl font-medium">
             Sponsor the next generation of tech.
           </p>
@@ -65,8 +66,7 @@ export default function Donate() {
           className="rounded-xl object-cover w-full sm:w-1/2"
         />
       </div>
-      {/* <div>
-        <p className="text-center text-2xl pb-2">Sponsors</p>
+      <div>
         <Marquee pauseOnHover autoFill>
           {sponsors.map((sponsor) => (
             <div key={sponsor.alt} className="mx-7">
@@ -82,7 +82,7 @@ export default function Donate() {
             </div>
           ))}
         </Marquee>
-      </div> */}
+      </div>
       <div className="flex flex-row justify-between p-16">
         <Card className="w-72 bg-yellow-50">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
