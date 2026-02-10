@@ -82,7 +82,7 @@ export default function Donate() {
         <Marquee pauseOnHover autoFill>
           {sponsors.map((sponsor) => (
             <div key={sponsor.alt} className="mx-7">
-              <Link href={sponsor.href} target="_blank">
+              <Link href={sponsor.href}>
                 <Image
                   src={sponsor.src}
                   width={125}

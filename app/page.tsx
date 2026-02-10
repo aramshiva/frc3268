@@ -37,7 +37,7 @@ export default function Home() {
                 Email Us
               </Button>
             </Link>
-            <Link href="/sponsor" target="_blank">
+            <Link href="/sponsor">
               <Button
                   size="lg"
                   className="bg-yellow-500 hover:bg-yellow-600 text-black hover:cursor-pointer"
