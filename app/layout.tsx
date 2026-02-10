@@ -24,17 +24,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const posts = getBlogPosts();
-  const blogTitles = Object.fromEntries(
-    posts.map((post) => [post.slug, post.metadata.title])
-  );
 
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Nav blogTitles={blogTitles} />
+        <Nav />
         {children}
       </body>
     </html>
