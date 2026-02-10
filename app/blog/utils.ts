@@ -24,11 +24,11 @@ function parseFrontmatter(fileContent: string) {
   return { metadata: metadata as Metadata, content }
 }
 
-function getMDXFiles(dir) {
+function getMDXFiles(dir: string) {
   return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx' || path.extname(file) === '.md')
 }
 
-function getMDXData(dir) {
+function getMDXData(dir: string) {
   const mdxFiles = getMDXFiles(dir)
   return mdxFiles.map((file) => {
     const fileContent = fs.readFileSync(path.join(dir, file), 'utf-8')
