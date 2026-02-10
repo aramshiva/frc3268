@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BadgeDollarSign, Cpu, HeartHandshake, Mail, PiggyBank } from "lucide-react";
+import {
+  BadgeDollarSign,
+  Cpu,
+  HeartHandshake,
+  Mail,
+  PiggyBank,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
@@ -30,7 +36,7 @@ const sponsors = [
     src: "/logos/marquee/inglemoor.png",
     alt: "Inglemoor High School",
     href: "https://inglemoor.nsd.org",
-  }
+  },
 ];
 
 export default function Donate() {
@@ -38,7 +44,13 @@ export default function Donate() {
     <>
       <div className="flex flex-col sm:flex-row items-center gap-6 p-6 sm:p-16">
         <div className="w-full sm:w-1/2 items-center">
-        <Image src="/logos/logosquare.svg" alt="Valhallabots Logo" width={100} height={100} className="pb-1"/>
+          <Image
+            src="/logos/logosquare.svg"
+            alt="Valhallabots Logo"
+            width={100}
+            height={100}
+            className="pb-1"
+          />
           <p className="text-5xl font-medium">
             Sponsor the next generation of tech.
           </p>
@@ -84,11 +96,11 @@ export default function Donate() {
         </Marquee>
       </div>
       <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 p-6 sm:p-16">
-        <Card className="sm:w-full w-72 bg-yellow-50">
-            <div className="flex flex-row items-center gap-2 font-medium pl-5">
+        <Card className="sm:w-full w-72 bg-[#FBFDF8]">
+          <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <BadgeDollarSign />
             <p>Tax Deductible</p>
-            </div>
+          </div>
           <CardContent>
             <p>
               Your sponsorship is tax deductible as we are a school organization
@@ -97,36 +109,42 @@ export default function Donate() {
             </p>
           </CardContent>
         </Card>
-        <Card className="sm:w-full w-72 bg-yellow-50">
+        <Card className="sm:w-full w-72 bg-[#FBFDF8]">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <Cpu />
             <p>Support STEM-focused students</p>
-            </div>
+          </div>
           <CardContent>
             <p>
-              Your sponsorship directly supports students interested in STEM, mechanical engineering, programming, electrical engineering, 3D design, and more!
+              Your sponsorship directly supports students interested in STEM,
+              mechanical engineering, programming, electrical engineering, 3D
+              design, and more!
             </p>
           </CardContent>
         </Card>
-                <Card className="sm:w-full w-72 bg-yellow-50">
+                <Card className="sm:w-full w-72 bg-[#FBFDF8]">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <HeartHandshake />
             <p>Local Community</p>
             </div>
           <CardContent>
             <p>
-              We are a small local FRC team based in Kenmore, WA (just up the lake from Seattle), and your sponsorship is a great way to give back to your community
+              We are a small local FRC team based in Kenmore, WA (just up the
+              lake from Seattle), and your sponsorship is a great way to give
+              back to your community
             </p>
           </CardContent>
         </Card>
-                        <Card className="sm:w-full w-72 bg-yellow-50">
+                        <Card className="sm:w-full w-72 bg-[#FBFDF8]">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <PiggyBank />
             <p>Future Growth</p>
             </div>
           <CardContent>
             <p>
-              Investing in today{"'"}s students helps invest in tomorrow{"'"}s leaders and innovators, with your support, you are directly contributing to the leaders of tomorrow.
+              Investing in today{"'"}s students helps invest in tomorrow{"'"}s
+              leaders and innovators, with your support, you are directly
+              contributing to the leaders of tomorrow.
             </p>
           </CardContent>
         </Card>

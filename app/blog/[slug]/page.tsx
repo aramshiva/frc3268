@@ -3,7 +3,6 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import path from 'node:path'
 import fs from 'node:fs/promises'
 import { useMDXComponents } from '@/mdx-components'
-import BlogTemplate from '@/components/BlogTemplate'
 
 const contentDir = path.join(process.cwd(), 'content')
 const contentExtensions = ['.mdx', '.md'] as const
@@ -16,7 +15,11 @@ async function loadContentSource(slug: string) {
         'utf8'
       )
 
-      return source
+      // Strip frontmatter
+      const frontmatterRegex = /---\s*([\s\S]*?)\s*---/
+      const content = source.replace(frontmatterRegex, '').trim()
+
+      return content
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
         throw error
@@ -45,9 +48,17 @@ export default async function Page({
     components: useMDXComponents(),
   })
 
-  return <BlogTemplate>{content}</BlogTemplate>
+  return (
+      <>
+        <div className="flex flex-col sm:flex-row items-center gap-6 px-9 md:px-20 pt-4 md:pt-0">
+          <div className="prose prose-slate pb-9 prose-h1:font-medium prose-headings:font-medium prose-headings:text-black prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg prose-h6:text-md">
+            {content}
+          </div>
+        </div>
+      </>
+  )
 }
- 
+
 export async function generateStaticParams() {
   const entries = await fs.readdir(contentDir, { withFileTypes: true })
 
@@ -57,5 +68,5 @@ export async function generateStaticParams() {
     .filter((name) => contentExtensions.some((ext) => name.endsWith(ext)))
     .map((name) => ({ slug: name.replace(/\.(md|mdx)$/i, '') }))
 }
- 
+
 export const dynamicParams = false

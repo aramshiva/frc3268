@@ -104,39 +104,22 @@ export default function Resource() {
 
   return (
     <>
-      <div className="">
-        <div className="relative w-full h-64 sm:h-100 text-white rounded-xl">
-        <Image
-          src="/photos/competitions/2.webp"
-          alt="Inglemoor High School Robotics"
-          className="object-cover"
-          fill
-          priority
-        />
-          <div className="absolute inset-0 flex items-end mb-4 sm:mb-10">
-            <div className="flex-1 flex flex-col px-6 sm:pl-16">
-              <Image
-                src="/logos/3268.svg"
-                alt="Valhallabots Logo"
-                width={300}
-                height={120}
-                className="w-48 sm:w-[300px] h-auto"
-              />
-              <p
-                className={`${inter.className} pt-1 text-2xl sm:text-4xl font-medium [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]`}
-              >
-                Resources
-              </p>
-              <Link href="/" className="mt-2">
-                <p
-                  className={`${inter.className} [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] text-sm sm:text-lg font-medium underline`}
-                >
-                  ← Back to Home
-                </p>
-              </Link>
-            </div>
-            <div className="hidden sm:block sm:flex-1" />
+      <div className="p-6">
+        <div className="p-6 md:px-20 md:pb-20 flex flex-col sm:flex-row items-center gap-6">
+          <div className="w-full sm:w-1/2 items-center">
+            <p className="text-5xl font-medium">
+              Resources
+            </p>
+            <p className="text-2xl mb-5 mt-2">
+              A list of resources for new prospects, current team members, and anyone else interested in learning more about FRC and robotics in general!
+            </p>
           </div>
+          <Image
+              src="/photos/2.jpg"
+              alt="Competition photo"
+              width={600}
+              height={400}
+              className="rounded-xl object-cover w-full sm:w-1/2"/>
         </div>
         <div className="p-6 sm:p-16 text-lg sm:text-2xl">
           <p className="pb-6 sm:pb-9">Here’s a (non-exclusive) list of resources we’ve made over the years:</p>

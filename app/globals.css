@@ -122,3 +122,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (min-width: 48rem) {
+  .hometext {
+    width: calc(var(--spacing) * 100);
+  }
+}

@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu"
+import Nav from "../components/nav";
+import { getBlogPosts } from "./blog/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,11 +24,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const posts = getBlogPosts();
+  const blogTitles = Object.fromEntries(
+    posts.map((post) => [post.slug, post.metadata.title])
+  );
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Nav blogTitles={blogTitles} />
         {children}
       </body>
     </html>
