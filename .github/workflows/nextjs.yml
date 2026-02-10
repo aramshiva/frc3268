@@ -80,11 +80,6 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.build }}
 
-      # If you’re uploading ./out, you generally need an export step.
-      # Keep this; remove only if your project already outputs ./out during build.
-      - name: Export static site
-        run: ${{ steps.detect-package-manager.outputs.export }}
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
