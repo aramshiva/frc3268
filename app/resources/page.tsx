@@ -90,7 +90,7 @@ export default function Resource() {
       id: 3,
       title: "Team Resources",
       subtitle: "Resources made by us! ",
-      imageSrc: "/logos/logosquare.png",
+      imageSrc: "/logos/logosquare.svg",
       imageAlt: "Valhallabots Logo",
       imageWidth: 60,
       imageHeight: 60,
