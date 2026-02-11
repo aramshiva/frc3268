@@ -26,7 +26,7 @@ export default function Home() {
               FRC Team #3268 AKA “Valhalla Bots”
             </p>
           </div>
-          <div className="flex flex-wrap gap-2 md:gap-4 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-2 md:gap-4 justify-start">
             {/* buttons */}
             <Link href="mailto:inglemoor.robotics@gmail.com">
               <Button
