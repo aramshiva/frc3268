@@ -96,7 +96,7 @@ export default function Donate() {
         </Marquee>
       </div>
       <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-6 p-6 sm:p-16">
-        <Card className="sm:w-full w-72 bg-[#FBFDF8]">
+        <Card className="w-full md:w-72 bg-[#FBFDF8]">
           <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <BadgeDollarSign />
             <p>Tax Deductible</p>
@@ -109,7 +109,7 @@ export default function Donate() {
             </p>
           </CardContent>
         </Card>
-        <Card className="sm:w-full w-72 bg-[#FBFDF8]">
+        <Card className="w-full md:w-72 bg-[#FBFDF8]">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <Cpu />
             <p>Support STEM-focused students</p>
@@ -122,7 +122,7 @@ export default function Donate() {
             </p>
           </CardContent>
         </Card>
-                <Card className="sm:w-full w-72 bg-[#FBFDF8]">
+                <Card className="w-full md:w-72 bg-[#FBFDF8]">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <HeartHandshake />
             <p>Local Community</p>
@@ -135,7 +135,7 @@ export default function Donate() {
             </p>
           </CardContent>
         </Card>
-                        <Card className="sm:w-full w-72 bg-[#FBFDF8]">
+                        <Card className="w-full md:w-72 bg-[#FBFDF8]">
             <div className="flex flex-row items-center gap-2 font-medium pl-5">
             <PiggyBank />
             <p>Future Growth</p>

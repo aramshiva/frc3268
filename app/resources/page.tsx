@@ -29,22 +29,22 @@ export function Resources({ sections = [] }: ResourcesProps) {
     <div className="flex flex-col space-y-8">
       {sections.map((section) => (
         <div key={section.id}>
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-5">
+          <div className="pb-1">
             {section.imageSrc && (
               <Image
                 src={section.imageSrc}
                 alt={section.imageAlt ?? ""}
                 width={section.imageWidth ?? 120}
                 height={section.imageHeight ?? 120}
-                className="flex-shrink-0 object-contain"
+                className="flex-shrink-0 object-contain pb-2"
               />
             )}
-            <div className="text-center sm:text-left">
+            <div className="text-left">
               <p className="font-semibold text-xl sm:text-3xl">{section.title}</p>
               {section.subtitle && <p className="text-sm sm:text-base">{section.subtitle}</p>}
             </div>
           </div>
-          <ul className="mt-4 list-disc underline">
+          <ul className="mt-4 list-disc underline px-2">
             {section.links.map((link) => (
               <li key={link.href}>
                 <Link href={link.href}>{link.label}</Link>
@@ -104,7 +104,7 @@ export default function Resource() {
 
   return (
     <>
-      <div className="p-6">
+      <div className="md:p-6">
         <div className="p-6 md:px-20 md:pb-20 flex flex-col sm:flex-row items-center gap-6">
           <div className="w-full sm:w-1/2 items-center">
             <p className="text-5xl font-medium">

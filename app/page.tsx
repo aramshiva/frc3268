@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <div className="px-6">
+      <div className="px-0 md:px-6">
         <div className="px-6 md:px-20 pb-6 pt-20 md:pt-0 flex flex-col sm:flex-row items-center gap-6">
           <div>
           <div className="w-full sm:w-1/2 items-center">
@@ -66,7 +66,7 @@ export default function Home() {
               className="rounded-xl object-cover w-full sm:w-1/2"/>
         </div>
         {/* under header */}
-        <div className="text-xl md:text-2xl w-full md:w-[75%] m-auto justify-center p-16">
+        <div className="text-xl md:text-2xl w-full md:w-[75%] m-auto justify-center p-8 md:p-16">
           <p>
             <span className="font-semibold">Hey there!</span>
             <br /> We{"'"}re the Inglemoor High School Robotics Team. Our goal

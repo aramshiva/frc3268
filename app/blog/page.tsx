@@ -11,7 +11,7 @@ export default function BlogPage() {
   return (
       <>
           <div className="p-6">
-              <div className="p-6 md:px-20 md:pb-20 flex flex-col sm:flex-row items-center gap-6">
+              <div className="md:px-20 md:pb-20 flex flex-col sm:flex-row items-center gap-6">
               <div className="w-full sm:w-1/2 items-center">
                   <p className="text-5xl font-medium">
                       Blog
@@ -27,7 +27,7 @@ export default function BlogPage() {
                   height={400}
                   className="rounded-xl object-cover w-full sm:w-1/2"/>
           </div>
-          <div className="p-20">
+          <div className="px-6 md:px-20 py-20">
           <div className="space-y-6">
               {posts.map((post) => (
                   <article key={post.slug} className="border-b pb-6">
