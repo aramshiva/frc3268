@@ -4,7 +4,7 @@ import createMDX from '@next/mdx'
 
 const nextConfig: NextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  export: 'static',
+  output: 'export',
 };
 
 const withMDX = createMDX({
